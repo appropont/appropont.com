@@ -1,0 +1,22 @@
+{
+  "name": "appropont-nextein",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nextein",
+    "export": "nextein build && nextein export"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "next": "^3.0.3",
+    "nextein": "^1.0.0-beta18",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-ga": "^2.2.0",
+    "rebass": "^1.0.3"
+  }
+}
