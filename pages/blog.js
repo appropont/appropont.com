@@ -2,7 +2,7 @@ import React from 'react'
 import withPosts, { inCategory } from 'nextein/posts'
 import { Content } from 'nextein/post'
 
-import withAnalytics from '../components/analytics'
+import asPage from '../components/page.js';
 
 const Blog = withPosts(({ posts }) => {
   const blog = posts.filter(inCategory('blog'))
@@ -20,4 +20,4 @@ const Blog = withPosts(({ posts }) => {
   )
 })
 
-export default withAnalytics(Blog)
+export default asPage(Blog)

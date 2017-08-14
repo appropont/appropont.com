@@ -2,11 +2,10 @@ import React from 'react'
 import withPosts, { inCategory } from 'nextein/posts'
 import { Content } from 'nextein/post'
 
-import withAnalytics from '../components/analytics'
+import asPage from '../components/page.js';
 
 const Projects = withPosts(({ posts }) => {
   const projects = posts.filter(inCategory('projects'))
-  console.log('this.props', this.props)
   return (
     <main>
     {
@@ -20,4 +19,4 @@ const Projects = withPosts(({ posts }) => {
   )
 })
 
-export default withAnalytics(Projects)
+export default asPage(Projects)

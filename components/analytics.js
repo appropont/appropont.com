@@ -24,7 +24,7 @@ export default (Wrapped) => {
 
     }
 
-    render() {      
+    render() {
       return <Wrapped {...this.props} />
     }
   }

@@ -1,11 +1,19 @@
 import React from  'react'
 import withPost, { Content } from 'nextein/post'
 
-import withAnalytics from '../components/analytics'
+import { Banner, Heading } from 'rebass'
 
-const Post = withPost(({ post }) => {
+import asPage from '../components/page.js';
+
+const Post = withPost(({ post, url }) => {
   return (
     <main>
+      <Banner
+        color="white"
+        bg='gray8'
+        backgroundImage={post.data.bannerImage}>
+        <Heading>{post.data.title}</Heading>
+      </Banner>
       <article>
         <h1>{post.data.title}</h1>
         <Content {...post} />
@@ -14,4 +22,4 @@ const Post = withPost(({ post }) => {
   )
 })
 
-export default withAnalytics(Post)
+export default asPage(Post)
